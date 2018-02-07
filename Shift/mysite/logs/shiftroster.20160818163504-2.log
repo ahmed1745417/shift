@@ -1,0 +1,44 @@
+2016-08-18 16:35:04,065 - teradata.udaexec - INFO - Initializing UdaExec...
+2016-08-18 16:35:04,065 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Shift\\Shift\\mysite\\udaexec.ini: Not Found']
+2016-08-18 16:35:04,065 - teradata.udaexec - INFO - Found run number file: "C:\Users\BS255029\Documents\Shift\Shift\mysite\.runNumber"
+2016-08-18 16:35:04,065 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2016-08-18 16:35:04,066 - teradata.udaexec - INFO - Removed 0 log files.
+2016-08-18 16:35:04,075 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\BS255029\Documents\Shift\Shift\mysite\shiftroster.checkpoint
+2016-08-18 16:35:04,076 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2016-08-18 16:35:04,076 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: shiftroster
+ *          Version: 1.0
+ *       Run Number: 20160818163504-2
+ *             Host: WINBS255029-O9Y
+ *         Platform: Windows-7-6.1.7601-SP1
+ *          OS User: bs255029
+ *   Python Version: 3.4.4
+ *  Python Compiler: MSC v.1600 64 bit (AMD64)
+ *     Python Build: ('v3.4.4:737efcadf5a6', 'Dec 20 2015 20:20:57')
+ *  UdaExec Version: 15.10.0.17
+ *     Program Name: manage.py
+ *      Working Dir: C:\Users\BS255029\Documents\Shift\Shift\mysite
+ *          Log Dir: C:\Users\BS255029\Documents\Shift\Shift\mysite\logs
+ *         Log File: C:\Users\BS255029\Documents\Shift\Shift\mysite\logs\shiftroster.20160818163504-2.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Shift\\Shift\\mysite\\udaexec.ini: Not Found']
+ *      Query Bands: ApplicationName=shiftroster;Version=1.0;JobID=20160818163504-2;ClientUser=bs255029;Production=False;udaAppLogFile=C:\Users\BS255029\Documents\Shift\Shift\mysite\logs\shiftroster.20160818163504-2.log;UtilityName=PyTd;UtilityVersion=15.10.0.17
+********************************************************************************/
+2016-08-18 16:35:04,076 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'system': 'tiescfm01', 'password': 'XXXXXX', 'username': 'select_user'}
+2016-08-18 16:35:06,305 - teradata.udaexec - INFO - Connection successful. Duration: 2.228 seconds. Details: {'method': 'odbc', 'system': 'tiescfm01', 'password': 'XXXXXX', 'username': 'select_user'}
+2016-08-18 16:35:06,327 - teradata.udaexec - INFO - Query Successful. Duration: 0.022 seconds, Rows: 1, Query: select * from trm.employee_detail where e_empid=10316
+2016-08-18 16:35:06,327 - django.request - ERROR - Internal Server Error: /shiftroster/test
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python34\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Python34\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python34\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BS255029\Documents\Shift\Shift\mysite\shiftroster\views.py", line 381, in test
+    data=session.fetchone()
+AttributeError: 'UdaExecConnection' object has no attribute 'fetchone'
+2016-08-18 16:37:37,899 - teradata.tdodbc - WARNING - 1 open connections found on exit, attempting to close...
+2016-08-18 16:37:37,929 - teradata.udaexec - INFO - UdaExec exiting.

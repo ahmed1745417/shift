@@ -1,0 +1,154 @@
+2016-08-22 15:37:41,278 - teradata.udaexec - INFO - Initializing UdaExec...
+2016-08-22 15:37:41,278 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Shift\\Shift\\mysite\\udaexec.ini: Found']
+2016-08-22 15:37:41,278 - teradata.udaexec - INFO - Found run number file: "C:\Users\BS255029\Documents\Shift\Shift\mysite\.runNumber"
+2016-08-22 15:37:41,279 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2016-08-22 15:37:41,279 - teradata.udaexec - INFO - Removed 0 log files.
+2016-08-22 15:37:41,289 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\BS255029\Documents\Shift\Shift\mysite\shiftroster.checkpoint
+2016-08-22 15:37:41,289 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2016-08-22 15:37:41,289 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: shiftroster
+ *          Version: 2
+ *       Run Number: 20160822153741-34
+ *             Host: WINBS255029-O9Y
+ *         Platform: Windows-7-6.1.7601-SP1
+ *          OS User: bs255029
+ *   Python Version: 3.4.4
+ *  Python Compiler: MSC v.1600 64 bit (AMD64)
+ *     Python Build: ('v3.4.4:737efcadf5a6', 'Dec 20 2015 20:20:57')
+ *  UdaExec Version: 15.10.0.17
+ *     Program Name: manage.py
+ *      Working Dir: C:\Users\BS255029\Documents\Shift\Shift\mysite
+ *          Log Dir: C:\Users\BS255029\Documents\Shift\Shift\mysite\logs
+ *         Log File: C:\Users\BS255029\Documents\Shift\Shift\mysite\logs\shiftroster.20160822153741-34.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Shift\\Shift\\mysite\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=shiftroster;Version=2;JobID=20160822153741-34;ClientUser=bs255029;Production=False;udaAppLogFile=C:\Users\BS255029\Documents\Shift\Shift\mysite\logs\shiftroster.20160822153741-34.log;UtilityName=PyTd;UtilityVersion=15.10.0.17
+********************************************************************************/
+2016-08-22 15:37:41,290 - teradata.udaexec - INFO - Creating connection: {'username': 'select_user', 'system': 'tiescfm01', 'method': 'odbc', 'password': 'XXXXXX', 'charset': 'UTF8', 'externalDSN': 'TIES'}
+2016-08-22 15:37:41,409 - teradata.udaexec - INFO - Connection successful. Duration: 0.119 seconds. Details: {'username': 'select_user', 'system': 'tiescfm01', 'method': 'odbc', 'password': 'XXXXXX', 'charset': 'UTF8', 'externalDSN': 'TIES'}
+2016-08-22 15:37:41,411 - teradata.udaexec - INFO - Initializing UdaExec...
+2016-08-22 15:37:41,412 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Shift\\Shift\\mysite\\udaexec.ini: Found']
+2016-08-22 15:37:41,412 - teradata.udaexec - INFO - Found run number file: "C:\Users\BS255029\Documents\Shift\Shift\mysite\.runNumber"
+2016-08-22 15:37:41,412 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2016-08-22 15:37:41,412 - teradata.udaexec - INFO - Removed 0 log files.
+2016-08-22 15:37:41,416 - teradata.udaexec - INFO - Query Successful. Duration: 0.007 seconds, Rows: 2, Query: select * from trm.employee_detail where e_empid=10316 or e_empid=10317
+2016-08-22 15:37:41,426 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\BS255029\Documents\Shift\Shift\mysite\shiftroster.checkpoint
+2016-08-22 15:37:41,426 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2016-08-22 15:37:41,426 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: shiftroster
+ *          Version: 2
+ *       Run Number: 20160822153741-35
+ *             Host: WINBS255029-O9Y
+ *         Platform: Windows-7-6.1.7601-SP1
+ *          OS User: bs255029
+ *   Python Version: 3.4.4
+ *  Python Compiler: MSC v.1600 64 bit (AMD64)
+ *     Python Build: ('v3.4.4:737efcadf5a6', 'Dec 20 2015 20:20:57')
+ *  UdaExec Version: 15.10.0.17
+ *     Program Name: manage.py
+ *      Working Dir: C:\Users\BS255029\Documents\Shift\Shift\mysite
+ *          Log Dir: C:\Users\BS255029\Documents\Shift\Shift\mysite\logs
+ *         Log File: C:\Users\BS255029\Documents\Shift\Shift\mysite\logs\shiftroster.20160822153741-35.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Shift\\Shift\\mysite\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=shiftroster;Version=2;JobID=20160822153741-35;ClientUser=bs255029;Production=False;udaAppLogFile=C:\Users\BS255029\Documents\Shift\Shift\mysite\logs\shiftroster.20160822153741-35.log;UtilityName=PyTd;UtilityVersion=15.10.0.17
+********************************************************************************/
+2016-08-22 15:37:41,427 - teradata.udaexec - INFO - Creating connection: {'username': 'select_user', 'system': 'tiescfm01', 'method': 'odbc', 'password': 'XXXXXX', 'charset': 'UTF8', 'externalDSN': 'TIES'}
+2016-08-22 15:37:41,534 - teradata.udaexec - INFO - Connection successful. Duration: 0.107 seconds. Details: {'username': 'select_user', 'system': 'tiescfm01', 'method': 'odbc', 'password': 'XXXXXX', 'charset': 'UTF8', 'externalDSN': 'TIES'}
+2016-08-22 15:37:41,541 - teradata.udaexec - INFO - Query Successful. Duration: 0.007 seconds, Rows: 2, Query: select * from trm.employee_detail where e_empid=10316 or e_empid=10317
+2016-08-22 15:37:43,769 - django.request - WARNING - Not Found: /shiftroster/wfhform.html
+2016-08-22 15:45:49,825 - teradata.udaexec - INFO - Initializing UdaExec...
+2016-08-22 15:45:49,826 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Shift\\Shift\\mysite\\udaexec.ini: Found']
+2016-08-22 15:45:49,826 - teradata.udaexec - INFO - Found run number file: "C:\Users\BS255029\Documents\Shift\Shift\mysite\.runNumber"
+2016-08-22 15:45:49,826 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2016-08-22 15:45:49,827 - teradata.udaexec - INFO - Removed 0 log files.
+2016-08-22 15:45:49,851 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\BS255029\Documents\Shift\Shift\mysite\shiftroster.checkpoint
+2016-08-22 15:45:49,851 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2016-08-22 15:45:49,852 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: shiftroster
+ *          Version: 2
+ *       Run Number: 20160822154549-36
+ *             Host: WINBS255029-O9Y
+ *         Platform: Windows-7-6.1.7601-SP1
+ *          OS User: bs255029
+ *   Python Version: 3.4.4
+ *  Python Compiler: MSC v.1600 64 bit (AMD64)
+ *     Python Build: ('v3.4.4:737efcadf5a6', 'Dec 20 2015 20:20:57')
+ *  UdaExec Version: 15.10.0.17
+ *     Program Name: manage.py
+ *      Working Dir: C:\Users\BS255029\Documents\Shift\Shift\mysite
+ *          Log Dir: C:\Users\BS255029\Documents\Shift\Shift\mysite\logs
+ *         Log File: C:\Users\BS255029\Documents\Shift\Shift\mysite\logs\shiftroster.20160822154549-36.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Shift\\Shift\\mysite\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=shiftroster;Version=2;JobID=20160822154549-36;ClientUser=bs255029;Production=False;udaAppLogFile=C:\Users\BS255029\Documents\Shift\Shift\mysite\logs\shiftroster.20160822154549-36.log;UtilityName=PyTd;UtilityVersion=15.10.0.17
+********************************************************************************/
+2016-08-22 15:45:49,853 - teradata.udaexec - INFO - Creating connection: {'username': 'select_user', 'system': 'tiescfm01', 'method': 'odbc', 'password': 'XXXXXX', 'charset': 'UTF8', 'externalDSN': 'TIES'}
+2016-08-22 15:45:49,977 - teradata.udaexec - INFO - Connection successful. Duration: 0.123 seconds. Details: {'username': 'select_user', 'system': 'tiescfm01', 'method': 'odbc', 'password': 'XXXXXX', 'charset': 'UTF8', 'externalDSN': 'TIES'}
+2016-08-22 15:45:49,984 - teradata.udaexec - INFO - Query Successful. Duration: 0.006 seconds, Rows: 2, Query: select * from trm.employee_detail where e_empid=10316 or e_empid=10317
+2016-08-22 15:45:50,010 - teradata.udaexec - INFO - Initializing UdaExec...
+2016-08-22 15:45:50,010 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Shift\\Shift\\mysite\\udaexec.ini: Found']
+2016-08-22 15:45:50,011 - teradata.udaexec - INFO - Found run number file: "C:\Users\BS255029\Documents\Shift\Shift\mysite\.runNumber"
+2016-08-22 15:45:50,011 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2016-08-22 15:45:50,012 - teradata.udaexec - INFO - Removed 0 log files.
+2016-08-22 15:45:50,065 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\BS255029\Documents\Shift\Shift\mysite\shiftroster.checkpoint
+2016-08-22 15:45:50,065 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2016-08-22 15:45:50,065 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: shiftroster
+ *          Version: 2
+ *       Run Number: 20160822154549-37
+ *             Host: WINBS255029-O9Y
+ *         Platform: Windows-7-6.1.7601-SP1
+ *          OS User: bs255029
+ *   Python Version: 3.4.4
+ *  Python Compiler: MSC v.1600 64 bit (AMD64)
+ *     Python Build: ('v3.4.4:737efcadf5a6', 'Dec 20 2015 20:20:57')
+ *  UdaExec Version: 15.10.0.17
+ *     Program Name: manage.py
+ *      Working Dir: C:\Users\BS255029\Documents\Shift\Shift\mysite
+ *          Log Dir: C:\Users\BS255029\Documents\Shift\Shift\mysite\logs
+ *         Log File: C:\Users\BS255029\Documents\Shift\Shift\mysite\logs\shiftroster.20160822154549-37.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Shift\\Shift\\mysite\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=shiftroster;Version=2;JobID=20160822154549-37;ClientUser=bs255029;Production=False;udaAppLogFile=C:\Users\BS255029\Documents\Shift\Shift\mysite\logs\shiftroster.20160822154549-37.log;UtilityName=PyTd;UtilityVersion=15.10.0.17
+********************************************************************************/
+2016-08-22 15:45:50,067 - teradata.udaexec - INFO - Creating connection: {'username': 'select_user', 'system': 'tiescfm01', 'method': 'odbc', 'password': 'XXXXXX', 'charset': 'UTF8', 'externalDSN': 'TIES'}
+2016-08-22 15:45:50,167 - teradata.udaexec - INFO - Connection successful. Duration: 0.100 seconds. Details: {'username': 'select_user', 'system': 'tiescfm01', 'method': 'odbc', 'password': 'XXXXXX', 'charset': 'UTF8', 'externalDSN': 'TIES'}
+2016-08-22 15:45:50,174 - teradata.udaexec - INFO - Query Successful. Duration: 0.006 seconds, Rows: 2, Query: select * from trm.employee_detail where e_empid=10316 or e_empid=10317
+2016-08-22 15:45:51,759 - django.request - WARNING - Not Found: /shiftroster/wfhform.html
+2016-08-22 15:45:56,955 - django.request - WARNING - Not Found: /shiftroster/tcrform.html
+2016-08-22 15:52:08,854 - teradata.udaexec - INFO - Initializing UdaExec...
+2016-08-22 15:52:08,854 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Shift\\Shift\\mysite\\udaexec.ini: Found']
+2016-08-22 15:52:08,854 - teradata.udaexec - INFO - Found run number file: "C:\Users\BS255029\Documents\Shift\Shift\mysite\.runNumber"
+2016-08-22 15:52:08,855 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2016-08-22 15:52:08,855 - teradata.udaexec - INFO - Removed 0 log files.
+2016-08-22 15:52:08,894 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\BS255029\Documents\Shift\Shift\mysite\shiftroster.checkpoint
+2016-08-22 15:52:08,894 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2016-08-22 15:52:08,895 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: shiftroster
+ *          Version: 2
+ *       Run Number: 20160822155208-38
+ *             Host: WINBS255029-O9Y
+ *         Platform: Windows-7-6.1.7601-SP1
+ *          OS User: bs255029
+ *   Python Version: 3.4.4
+ *  Python Compiler: MSC v.1600 64 bit (AMD64)
+ *     Python Build: ('v3.4.4:737efcadf5a6', 'Dec 20 2015 20:20:57')
+ *  UdaExec Version: 15.10.0.17
+ *     Program Name: manage.py
+ *      Working Dir: C:\Users\BS255029\Documents\Shift\Shift\mysite
+ *          Log Dir: C:\Users\BS255029\Documents\Shift\Shift\mysite\logs
+ *         Log File: C:\Users\BS255029\Documents\Shift\Shift\mysite\logs\shiftroster.20160822155208-38.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Shift\\Shift\\mysite\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=shiftroster;Version=2;JobID=20160822155208-38;ClientUser=bs255029;Production=False;udaAppLogFile=C:\Users\BS255029\Documents\Shift\Shift\mysite\logs\shiftroster.20160822155208-38.log;UtilityName=PyTd;UtilityVersion=15.10.0.17
+********************************************************************************/
+2016-08-22 15:52:08,897 - teradata.udaexec - INFO - Creating connection: {'username': 'select_user', 'system': 'tiescfm01', 'method': 'odbc', 'password': 'XXXXXX', 'charset': 'UTF8', 'externalDSN': 'TIES'}
+2016-08-22 15:52:09,051 - teradata.udaexec - INFO - Connection successful. Duration: 0.154 seconds. Details: {'username': 'select_user', 'system': 'tiescfm01', 'method': 'odbc', 'password': 'XXXXXX', 'charset': 'UTF8', 'externalDSN': 'TIES'}
+2016-08-22 15:52:09,058 - teradata.udaexec - INFO - Query Successful. Duration: 0.007 seconds, Rows: 2, Query: select * from trm.employee_detail where e_empid=10316 or e_empid=10317
+2016-08-22 15:52:21,875 - teradata.udaexec - INFO - UdaExec exiting.
+2016-08-22 15:52:21,876 - teradata.udaexec - INFO - UdaExec exiting.
+2016-08-22 15:52:21,876 - teradata.udaexec - INFO - UdaExec exiting.
+2016-08-22 15:52:21,876 - teradata.udaexec - INFO - UdaExec exiting.
+2016-08-22 15:52:21,877 - teradata.udaexec - INFO - UdaExec exiting.
+2016-08-22 15:52:21,878 - teradata.udaexec - INFO - UdaExec exiting.

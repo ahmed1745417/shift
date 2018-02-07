@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+{% load staticfiles %}
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Cloud Shift Roster</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="{% static 'shiftroster/css/base.css' %}">
+   <link rel="stylesheet" href="{% static 'shiftroster/css/vendor.min.css' %}">
+   <link rel="stylesheet" href="{% static 'shiftroster/css/main.css' %}">     
+
+   <!-- script
+   ================================================== -->
+	<script src="{% static 'shiftroster/js/modernizr.js' %}"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="{% static 'shiftroster/favicon.png' %}" >
+
+</head>
+
+<body>
+
+	<!-- header
+   ================================================== -->
+   <header id="main-header">
+
+   	<div class="row">
+
+	      <div class="logo">
+	         <a href="">Cloud</a>
+	      </div>
+
+	      <nav id="nav-wrap">         
+	         
+	         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">
+	         	<span class="menu-icon">Menu</span>
+	         </a>
+         	<a class="mobile-btn" href="#" title="Hide navigation">
+         		<span class="menu-icon">Menu</span>
+         	</a>            
+
+	         <ul id="nav" class="nav">
+	            <li><a href='./'>Home.</a></li>
+		         <li class="current"><a  href="./#portfolio">Team.</a></li>
+	            <li><a class="smoothscroll" href="#services">Roster.</a></li>
+	            <li><a class="smoothscroll" href="#about">Generate/Calculate.</a></li>
+	            <li><a class="smoothscroll" href="#contact">Exchange/Leave.</a></li>
+	         </ul> <!-- end #nav -->
+
+	      </nav> <!-- end #nav-wrap -->
+
+	          
+
+	   </div>
+
+   </header> <!-- end header -->
+
+
+   <!-- homepage hero
+   ================================================== -->
+    <!-- end portfolio -->
+
+<style>
+
+th {
+background-color: #4CAF50;
+}
+td{
+padding: 8px;}
+
+</style>
+   <!-- Services Section
+   ================================================== -->
+   <section id="services">
+   
+   <div class="row section-head">
+
+      	<div class="twelve columns">
+
+      		<h1>RESULT<span>.</span></h1>
+
+	         <hr />               
+
+	         
+
+	      </div>
+
+      </div> <!-- end section-head -->
+
+      
+{% if vdata %}
+<p align = "center" style="color:white;"> Roster </p>
+    <table border="1"  style=" border: 1px solid black; width:80%;text-align:center;color: white;" align="center">
+	
+	<tr> <th>Date </th>
+	    <th>Morning Shift</th><th>Morning Shift</th><th>Morning Shift</th>
+		
+		<th>Afternoon Shift</th><th>Afternoon Shift</th><th>Afternoon Shift</th>
+		
+		<th>Night Shift</th><th>Night Shift</th><th>Night Shift</th>
+    </tr>
+	
+    {% for emp in vdata %}
+	<tr onmouseover="this.style.backgroundColor='#ff0000'" onmouseout="this.style.backgroundColor=''"> <td>{{emp.0}}</td>
+	    <td>{{emp.1}}</td><td>{{emp.2}}</td><td>{{emp.3}}</td>
+		
+		<td>{{emp.4}}</td><td>{{emp.5}}</td><td>{{emp.6}}</td>
+		
+		<td>{{emp.7}}</td><td>{{emp.8}}</td><td>{{emp.9}}</td>
+    </tr>
+	{% endfor %}
+    </table>
+
+{% endif %}
+
+<br>
+
+
+
+<br>
+
+{% if sa_data %}
+<p align = "center" style="color:white;">SHIFT ALLOWANCE</p>
+    <table border="1"  style=" border: 1px solid black; width:60%;text-align:center;color: orange;" align="center">
+	
+	<tr> <th>ID </th>
+	    <th>Name</th><th>Morning Shifts</th>
+		
+		<th>Afternoon Shifts</th>
+		
+		<th>Night Shifts</th><th>Total Amount</th>
+    </tr>
+	
+    {% for sa in sa_data %}
+	<tr> <td>{{sa.0}}</td>
+	    <td>{{sa.1}}</td><td>{{sa.2}}</td><td>{{sa.3}}</td>
+		
+		<td>{{sa.4}}</td><td>{{sa.5}}</td>
+    </tr>
+	{% endfor %}
+    </table>
+
+{% endif %}
+
+
+<br>
+
+
+
+{% if ta_data %}
+<p align = "center" style="color:white;">Travel Allowance</p>
+    <table border="1"  style=" border: 1px solid black; width:60%;text-align:center;color: orange;" align="center">
+	
+	<tr> <th>ID </th>
+	    <th>Name</th><th>Morning Shifts</th>
+		
+		<th>Afternoon Shifts</th>
+		
+		<th>Night Shifts</th><th>Total Amount</th>
+    </tr>
+	
+    {% for ta in ta_data %}
+	<tr> <td>{{ta.0}}</td>
+	    <td>{{ta.1}}</td><td>{{ta.2}}</td><td>{{ta.3}}</td>
+		
+		<td>{{ta.4}}</td><td>{{ta.5}}</td>
+    </tr>
+	{% endfor %}
+    </table>
+
+{% endif %}
+
+
+</section>
+
+<section id="about">
+<div class="row section-head">
+
+      	<div class="twelve columns">
+
+      		<h1>Generate Shift Roster<span>.</span></h1>
+
+	         <hr />               
+
+	         
+
+	      </div>
+
+      </div> <!-- end section-head -->
+	  
+	  
+	  
+	  
+
+   	  
+
+     <!-- end contact -->
+
+<form action="generate" method="post" align="center">{% csrf_token %}
+<table align="center" style="color:#4CAF50;"><tr>
+
+<td>Roster From</td><td> <input type="date" name="genstartdate" align ="center"> </td><td>To</td><td>
+<input type="date" name="genenddate"><br></td></tr></table>
+<br>
+<input type="submit" value="Generate" />
+</form>
+
+
+<br>
+<br>
+<div class="row section-head">
+
+      	<div class="twelve columns">
+
+      		<h1>View Roster & Calculate Allowances<span>.</span></h1>
+
+	         <hr />               
+
+	         
+
+	      </div>
+
+      </div> <!-- end section-head -->
+
+<form action="calculate" method="post" align="center">{% csrf_token %}
+<table align="center"  style="text-align:left;color:#4CAF50;"><tr>
+
+<td>View Roster From</td><td> <input type="date" name="startdate" align ="center"> </td><td>To</td><td>
+<input type="date" name="enddate"><br></td></tr><tr><td><br></td></tr>
+<tr><td>
+Shift Allowance from </td><td><input type="date" name="sa_startdate"></td><td> To</td><td><input type="date" name="sa_enddate"></td></tr>
+<tr></tr><tr><td><br></td></tr>
+<tr><td>
+Travel Allowance from</td><td> <input type="date" name="ta_startdate"></td><td> To</td>
+<td><input type="date" name="ta_enddate"></td></tr><tr><td><br></td></tr></table>
+<br>
+<input type="submit" value="Calculate" />
+</form>
+
+
+   </section> <!-- end services -->
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="contact">
+
+   	<div class="row section-head">
+
+      	<div class="twelve columns">
+
+      		<h1>Exchange/Leave<span>.</span></h1>
+
+	         <hr />     	    
+
+	         
+
+<form action="exchange" method="post" align="center">{% csrf_token %}
+
+<br>
+<table align="center"  style="text-align:left;color:#4CAF50;"><tr><td>
+
+
+<select id="id_feild1" name="exsourcename">
+<option value="">Select Resource</option>
+<option value="Ahmed">Ahmed</option>
+<option value="Srinivas">Srinivas</option>
+<option value="Swamy">Swamy</option>
+<option value="Karthik">Karthik</option>
+<option value="Naresh">Naresh</option>
+<option value="Rambabu">Rambabu</option>
+<option value="Naveen">Naveen</option>
+<option value="Hitesh">Hitesh</option>
+</select>
+
+</td>
+<td> Select Date</td><td><input type="date" name="exsourcedate"></td>
+
+<td>With</td>
+<td>
+
+
+<select id="id_feild1" name="exdestname">
+<option value="">Select Resource</option>
+<option value="Ahmed">Ahmed</option>
+<option value="Srinivas">Srinivas</option>
+<option value="Swamy">Swamy</option>
+<option value="Karthik">Karthik</option>
+<option value="Naresh">Naresh</option>
+<option value="Rambabu">Rambabu</option>
+<option value="Naveen">Naveen</option>
+<option value="Hitesh">Hitesh</option>
+</select>
+
+</td>
+<td> Select Date</td><td><input type="date" name="exdestdate"></td>
+</tr></table><br>
+<input type="submit" value="Exchange" />
+</form>
+<br><br><br>
+
+
+<form action="leave" method="post" align="center">{% csrf_token %}
+
+<br>
+<table align="center"  style="text-align:left;color:#4CAF50;"><tr><td>
+
+
+<select id="id_feild1" name="leavename">
+<option value="">Select Resource</option>
+<option value="Ahmed">Ahmed</option>
+<option value="Srinivas">Srinivas</option>
+<option value="Swamy">Swamy</option>
+<option value="Karthik">Karthik</option>
+<option value="Naresh">Naresh</option>
+<option value="Rambabu">Rambabu</option>
+<option value="Naveen">Naveen</option>
+<option value="Hitesh">Hitesh</option>
+</select>
+
+</td>
+<td> Select Date</td><td><input type="date" name="leavedate"></td></tr></table>
+<input type="submit" value="Apply Leave" />
+
+</form>
+
+	      </div> <!-- end section-head -->
+
+      	           
+
+   </section> <!-- end about -->  
+
+
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+      <div class="row content flex-container">
+    
+         <div id="testimonial-slider" class="flexslider">
+
+            <ul class="slides">
+               <li>
+                  <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is
+                  to do what you believe is great work. And the only way to do great work is to love what you do.
+                  If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
+                  </p>
+
+                  <div class="testimonial-author">
+                    	<img src="{% static 'shiftroster/images/avatars/avatar-1.jpg' %}" alt="Author image">
+                    	<div class="author-info">
+                    		Steve Jobs
+                    		<span class="position">CEO, Apple.</span>
+                    	</div>
+                  </div>
+             	</li> <!-- end slide -->
+
+               <li>                       
+                  <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                  </p>
+                  <div class="testimonial-author">
+                    	<img src="{% static 'shiftroster/images/avatars/avatar-2.jpg' %}" alt="Author image">
+                    	<div class="author-info">
+                    		John Doe
+                    		<span>CEO, ABC Corp.</span>
+                    	</div>
+                  </div>                        
+               </li> <!-- end slide -->
+
+            </ul> <!-- end slides -->
+
+         </div> <!-- end flexslider -->         
+        
+      </div> <!-- end row -->
+
+   </section> <!-- end testimonials section -->  
+
+
+   <!-- contact
+   ================================================== -->
+   <!-- end contact -->
+
+
+   <!-- Footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">  
+
+                
+
+         <ul class="copyright">
+         	<li>&copy;</li> 
+         	<li>Designed & Developed by <a href="http://hasane.com/">SHAIK BADIUDDIN AHMED.</a>.</li>
+         </ul>
+
+         <div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#hero">Back to Top<i class="fa fa-angle-up"></i></a>
+         </div>
+
+      </div> <!-- end row -->
+
+   </footer> <!-- end footer -->
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="{% static 'shiftroster/js/jquery-1.11.3.min.js' %}"></script>
+   <script src="{% static 'shiftroster/js/jquery-migrate-1.2.1.min.js' %}"></script>
+   <script src="{% static 'shiftroster/js/jquery.flexslider-min.js' %}"></script>
+   <script src="{% static 'shiftroster/js/jquery.waypoints.min.js' %}"></script>
+   <script src="{% static 'shiftroster/js/jquery.validate.min.js' %}"></script>
+   <script src="{% static 'shiftroster/js/jquery.fittext.js' %}"></script>
+   <script src="{% static 'shiftroster/js/jquery.placeholder.min.js' %}"></script>
+   <script src="{% static 'shiftroster/js/jquery.magnific-popup.min.js' %}"></script>  
+   <script src="{% static 'shiftroster/js/main.js' %}"></script>
+
+</body>
+
+</html>

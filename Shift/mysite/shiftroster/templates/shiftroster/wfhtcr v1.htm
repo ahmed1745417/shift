@@ -1,0 +1,127 @@
+
+{% load staticfiles %}
+<html ng-app="rootapp">
+    <head>
+        <title>TIES INTRANET</title>
+        
+        <!-- Include bootstrap css-->
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <!-- Include main CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'shiftroster/css/style.css' %}">
+        <!-- Include jQuery library -->
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <!-- Include AngularJS library -->
+        <script src="//code.angularjs.org/1.5.8/angular.min.js"></script>
+       <script src="//code.angularjs.org/1.5.8/angular-route.min.js"></script>
+        <!-- Include internal Script-->
+        <script src="{% static 'shiftroster/js/angular-script.js' %}"></script>
+        <!--Include bootstrap JQuery-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--Include bootstrap JS-->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    </head>
+	<!--
+<script>
+var rootapp = angular.module('rootapp', ['ngRoute']);
+
+
+rootapp.config(function ($routeProvider) {
+    
+    $routeProvider
+    
+    .when('/wfh', {
+        
+        templateUrl: 'wfhform.html',
+        controller: 'wfhController'
+    })
+    
+    .when('/tcr', {
+        
+        templateUrl: 'tcrform.html',
+        controller: 'tcrController'
+    })
+    
+    .otherwise({
+        
+    })
+    
+});
+
+//var wfhapp = angular.module('wfhapp',[]);
+rootapp.controller('wfhController', function($scope,$http){
+    $scope.show_form = true;
+// Function to add toggle behaviour to form
+
+$('#wfhForm').slideToggle();
+$('#tcrForm').css('display', 'none');
+ $('#wfhForm').dblclick='index.htm';
+});
+
+//var tcrapp = angular.module('tcrapp',[]);
+rootapp.controller('tcrController',function($scope,$http){
+$scope.show_form1 = true;
+    // Function to add toggle behaviour to form
+
+$('#tcrForm').slideToggle();
+$('#wfhForm').css('display', 'none');
+ 
+});
+</script> -->
+    <body >
+        <div class="container wrapper" >
+            <h1 class="text-center">Work From home Demo</h1>
+            <nav class="navbar navbar-default">
+
+                <div class="navbar-header" >
+                    <div class="alert alert-default navbar-brand">
+                        <a href="#/wfh" class="btn btn-primary"  >Work From Home <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                    </div>
+                </div>
+
+                <div class="navbar-header" >
+                    <div class="alert alert-default navbar-brand">
+                        <a href="#/tcr" class="btn btn-primary" >Temp Card Request <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                    </div>
+                </div>
+            </nav>
+
+
+      <!-- <div class="col-md-6 col-md-offset-3">
+            <div ng-include src="'wfhform.html'"></div>
+           <div ng-include src="'tcrform.html'"></div>
+        </div>-->
+            
+            <div class="container">
+            
+                <div ng-view></div>
+                
+            </div>
+    </div>
+	
+	{% if data %}
+    <table border="1"  style=" border: 1px solid black; width:80%;text-align:center;" align="center" >
+	
+	<tr> <th >Date </th>
+	    <th >Morning Shift</th><th >Morning Shift</th><th >Morning Shift</th>
+		
+		<th >Afternoon Shift</th><th >Afternoon Shift</th><th >Afternoon Shift</th>
+		
+		<th >Night Shift</th ><th >Night Shift</th><th >Night Shift</th>
+    </tr>
+	
+    {% for emp in data %}
+	<tr onmouseover="this.style.backgroundColor='#ff0000'" onmouseout="this.style.backgroundColor=''"> <td>{{emp.0}}</td>
+	    <td>{{emp.1}}</td><td>{{emp.2}}</td><td>{{emp.3}}</td>
+		
+		<td>{{emp.4}}</td><td>{{emp.5}}</td><td>{{emp.6}}</td>
+		
+		<td>{{emp.7}}</td><td>{{emp.8}}</td><td>{{emp.9}}</td>
+    </tr>
+	{% endfor %}
+    </table>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+    </body>
+</html>

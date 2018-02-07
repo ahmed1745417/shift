@@ -1,0 +1,58 @@
+<!-- Form used to add new entries of employee in database -->
+<form class="form-horizontal alert alert-warning" name="wfh" id="wfhForm" ng-submit="alert()" hidden>
+<h3 class="text-center">Enter Your Work from home details</h3>
+	
+    <div class="form-group">
+		<label for="Name">QLID:</label>
+		<input type="text" name="qlid" class="form-control" placeholder="Enter Your QLID" ng-model="qlid" value="" autofocus required />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="wfh.qlid.$invalid && wfh.qlid.$dirty">QLID field is Empty!</p>
+	</div>
+    
+	<div class="form-group">
+		<label for="date">DATE:</label>
+		<input type="date" name="date" class="form-control" placeholder="Enter the DATE" ng-model="date" value="" autofocus required />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="wfh.date.$invalid && wfh.date.$dirty">DATE field is Empty!</p>
+	</div>
+    
+	<div class="form-group">
+		<label for="hrsworked">HOURS WORKED:</label>
+		<input type="text" name="hrsworked" class="form-control" placeholder="Enter the hours worked" ng-model="hrsworked" value="" autofocus required />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="wfh.hrsworked.$invalid && wfh.hrsworked.$dirty">Hrs Worked field is Empty!</p>
+	</div>
+	
+	<div class="form-group">
+		<label for="reason">Reaosn for WFH:</label>
+		<input type="text" name="reason" class="form-control" placeholder="Enter the Reason for WFH" ng-model="reason" value="" autofocus required />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="wfh.reason.$invalid && wfh.reason.$dirty">Reasons field is Empty!</p>
+	</div>
+    
+    <div class="form-group">
+		<label for="tasks">Tasks for WFH:</label>
+        <textarea rows="4" cols="30" name="tasks" class="form-control" placeholder="Enter the Reason for WFH" ng-model="tasks" value="" autofocus required></textarea>
+		
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="wfh.tasks.$invalid && wfh.tasks.$dirty">Tasks field is Empty!</p>
+	</div>
+    
+    <div class="form-group">
+		<label for="approver">Approver:</label>
+		<input type="text" name="reason" class="form-control" placeholder="Approver for your WFH" ng-model="approver" value="" autofocus required />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="wfh.approver.$invalid && wfh.approver.$dirty">Reasons field is Empty!</p>
+	</div>
+    
+	<div class="form-group">
+		<button class="btn btn-warning" ng-disabled="wfhForm.$invalid">Show me the details before sending mail</button>
+        <button class="btn btn-warning" ng-disabled="wfhForm.$invalid">Clear</button>
+	</div>
+</form>

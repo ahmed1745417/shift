@@ -1,0 +1,133 @@
+{% if emp_list %}
+    <table border="1"  style=" border: 1px solid black;">
+	
+	<tr> <td>Date </td>
+	    <td>Morning</td><td>Morning</td><td>Morning</td>
+		
+		<td>Afternoon</td><td>Afternoon</td><td>Afternoon</td>
+		
+		<td>Night</td><td>Night</td><td>Night</td>
+    </tr>
+	
+    {% for emp in emp_list %}
+	<tr> <td>{{emp.0}}</td>
+	    <td>{{emp.1}}</td><td>{{emp.2}}</td><td>{{emp.3}}</td>
+		
+		<td>{{emp.4}}</td><td>{{emp.5}}</td><td>{{emp.6}}</td>
+		
+		<td>{{emp.7}}</td><td>{{emp.8}}</td><td>{{emp.9}}</td>
+    </tr>
+	{% endfor %}
+    </table>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+
+<form action="calculate" method="post">{% csrf_token %}
+<br>
+Roster From <input type="date" name="startdate"> To
+<input type="date" name="enddate"><br>
+
+Shift Allowance from <input type="date" name="sa_startdate"> To
+<input type="date" name="sa_enddate">
+<br>
+
+Travel Allowance from <input type="date" name="ta_startdate"> To
+<input type="date" name="ta_enddate">
+<br>
+<input type="submit" value="Submit" />
+</form>
+
+
+
+
+
+-----
+
+
+Shift Roster 
+
+<br>
+
+{% if vdata %}
+    <table border="1"  style=" border: 1px solid black;">
+	
+	<tr> <td>Date </td>
+	    <td>Morning</td><td>Morning</td><td>Morning</td>
+		
+		<td>Afternoon</td><td>Afternoon</td><td>Afternoon</td>
+		
+		<td>Night</td><td>Night</td><td>Night</td>
+    </tr>
+	
+    {% for emp in vdata %}
+	<tr> <td>{{emp.0}}</td>
+	    <td>{{emp.1}}</td><td>{{emp.2}}</td><td>{{emp.3}}</td>
+		
+		<td>{{emp.4}}</td><td>{{emp.5}}</td><td>{{emp.6}}</td>
+		
+		<td>{{emp.7}}</td><td>{{emp.8}}</td><td>{{emp.9}}</td>
+    </tr>
+	{% endfor %}
+    </table>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+<br>
+
+Shift Allowance
+
+<br>
+
+{% if sa_data %}
+    <table border="1"  style=" border: 1px solid black;">
+	
+	<tr> <td>ID </td>
+	    <td>Name</td><td>Morning Shifts</td>
+		
+		<td>Afternoon Shifts</td>
+		
+		<td>Night Shifts</td><td>Total Amount</td>
+    </tr>
+	
+    {% for sa in sa_data %}
+	<tr> <td>{{sa.0}}</td>
+	    <td>{{sa.1}}</td><td>{{sa.2}}</td><td>{{sa.3}}</td>
+		
+		<td>{{sa.4}}</td><td>{{sa.5}}</td>
+    </tr>
+	{% endfor %}
+    </table>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+
+<br>
+
+Travel Allowance
+
+{% if ta_data %}
+    <table border="1"  style=" border: 1px solid black;">
+	
+	<tr> <td>ID </td>
+	    <td>Name</td><td>Morning Shifts</td>
+		
+		<td>Afternoon Shifts</td>
+		
+		<td>Night Shifts</td><td>Total Amount</td>
+    </tr>
+	
+    {% for ta in ta_data %}
+	<tr> <td>{{ta.0}}</td>
+	    <td>{{ta.1}}</td><td>{{ta.2}}</td><td>{{ta.3}}</td>
+		
+		<td>{{ta.4}}</td><td>{{ta.5}}</td>
+    </tr>
+	{% endfor %}
+    </table>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

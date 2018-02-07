@@ -1,0 +1,31 @@
+2016-08-28 22:18:48,683 - teradata.udaexec - INFO - Initializing UdaExec...
+2016-08-28 22:18:48,683 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Django\\Shift\\Shift\\mysite\\udaexec.ini: Found']
+2016-08-28 22:18:48,683 - teradata.udaexec - INFO - Found run number file: "C:\Users\BS255029\Documents\Django\Shift\Shift\mysite\.runNumber"
+2016-08-28 22:18:48,683 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2016-08-28 22:18:48,684 - teradata.udaexec - INFO - Removed 0 log files.
+2016-08-28 22:18:48,709 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\BS255029\Documents\Django\Shift\Shift\mysite\shiftroster.checkpoint
+2016-08-28 22:18:48,709 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2016-08-28 22:18:48,710 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: shiftroster
+ *          Version: 2
+ *       Run Number: 20160828221848-70
+ *             Host: WINBS255029-O9Y
+ *         Platform: Windows-7-6.1.7601-SP1
+ *          OS User: bs255029
+ *   Python Version: 3.4.4
+ *  Python Compiler: MSC v.1600 64 bit (AMD64)
+ *     Python Build: ('v3.4.4:737efcadf5a6', 'Dec 20 2015 20:20:57')
+ *  UdaExec Version: 15.10.0.17
+ *     Program Name: manage.py
+ *      Working Dir: C:\Users\BS255029\Documents\Django\Shift\Shift\mysite
+ *          Log Dir: C:\Users\BS255029\Documents\Django\Shift\Shift\mysite\logs
+ *         Log File: C:\Users\BS255029\Documents\Django\Shift\Shift\mysite\logs\shiftroster.20160828221848-70.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\udaexec.ini: Not Found', 'C:\\Users\\BS255029\\Documents\\Django\\Shift\\Shift\\mysite\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=shiftroster;Version=2;JobID=20160828221848-70;ClientUser=bs255029;Production=False;udaAppLogFile=C:\Users\BS255029\Documents\Django\Shift\Shift\mysite\logs\shiftroster.20160828221848-70.log;UtilityName=PyTd;UtilityVersion=15.10.0.17
+********************************************************************************/
+2016-08-28 22:18:48,710 - teradata.udaexec - INFO - Creating connection: {'externalDSN': 'TIES', 'password': 'XXXXXX', 'system': 'tiescfm01', 'username': 'select_user', 'charset': 'UTF8', 'method': 'odbc'}
+2016-08-28 22:18:51,505 - teradata.udaexec - INFO - Connection successful. Duration: 2.794 seconds. Details: {'externalDSN': 'TIES', 'password': 'XXXXXX', 'system': 'tiescfm01', 'username': 'select_user', 'charset': 'UTF8', 'method': 'odbc'}
+2016-08-28 22:18:51,532 - teradata.udaexec - INFO - Query Successful. Duration: 0.026 seconds, Rows: 2, Query: select * from trm.employee_detail where e_empid=10316 or e_empid=10317
+2016-08-28 22:18:54,418 - django.request - WARNING - Not Found: /favicon.ico
+2016-08-28 22:19:13,800 - teradata.udaexec - INFO - UdaExec exiting.
